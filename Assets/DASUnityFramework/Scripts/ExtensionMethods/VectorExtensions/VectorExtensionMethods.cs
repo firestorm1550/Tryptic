@@ -19,6 +19,16 @@ namespace DASUnityFramework.Scripts.ExtensionMethods.VectorExtensions
 
         
         /// <summary>
+        /// Converts each component of a Vector3Int to its absolute value.
+        /// </summary>
+        public static Vector3Int Abs(this Vector3Int v)
+        {
+            return new Vector3Int(Mathf.Abs(v.x), Mathf.Abs(v.y), Mathf.Abs(v.z));
+        }
+
+        
+        
+        /// <summary>
         /// Rounds each component of a Vector3 to a given number of decimal places
         /// </summary>
         public static Vector3 Round(this Vector3 v, int decimals)
