@@ -5,7 +5,7 @@ namespace Board
 {
     public class TrypticBoard
     {
-        public Dictionary<Vector3Int, TrypticBoardSpace> Spaces;
+        public Dictionary<Vector3Int, TrypticBoardSpace> Spaces = new();
         public TrypticBoard()
         {
             List<Vector3Int> hexCoordinates = new List<Vector3Int>();
@@ -14,10 +14,10 @@ namespace Board
             {
                 hexCoordinates.AddRange(HexBoardUtils.GetHexRing(i));
             }
-
+            
             foreach (Vector3Int hexCoordinate in hexCoordinates)
             {
-                
+                Spaces.Add(hexCoordinate, new TrypticBoardSpace(this, hexCoordinate));
             }
             
         }

@@ -68,6 +68,11 @@ namespace DASUnityFramework.Scripts.ExtensionMethods
         {
             return i % 2 == 1;
         }
+
+        public static int Abs(this int i)
+        {
+            return Mathf.Abs(i);
+        }
         
         //=============== float Extensions ==========================================
         

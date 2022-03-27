@@ -14,7 +14,7 @@ namespace Board
 
         public static List<Vector3Int> GetHexRing(int radius)
         {
-            var hex = HexDirectionUtils.Directions.Last() * radius;
+            var hex = HexDirectionUtils.Left * radius;
             var spaces = new List<Vector3Int>();
             
             foreach (Vector3Int direction in HexDirectionUtils.Directions)
